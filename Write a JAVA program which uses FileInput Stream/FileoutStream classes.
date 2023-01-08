@@ -1,0 +1,23 @@
+import java.io.*;
+class FileInOut
+{
+public static void main(String args[]) throws IOException
+{
+int size;
+String source = "Sri Siddartha Institute of 
+Technology\n"+"A Constituent of Sri Siddartha 
+University\n"+"Maralur Tumkur";
+byte buf[] = source.getBytes();
+OutputStream fo = new FileOutputStream("sample.txt");
+for(int i=0;i<buf.length;i++)
+fo.write(buf[i]);
+System.out.println("Writting to the file is 
+successful");
+fo.close();
+InputStream fi = new FileInputStream("sample.txt");
+size=fi.available();
+System.out.println("The contents of the file are : ");
+for(int i=0;i<size;i++)
+System.out.print((char)fi.read());
+}
+}
