@@ -1,0 +1,49 @@
+public class Circle
+{
+public double Area(float r)
+{
+return(3.14*r*r);
+}
+}
+package shape;
+public class Square
+{
+public double Area(float l)
+{
+return(l*l);
+}
+}
+package shape;
+public class Triangle
+{
+public double Area(float b,float h)
+{
+return(0.5*b*h);
+}
+}
+import shape.Circle;
+import shape.Square;
+import shape.Triangle;
+import java.util.Scanner;
+class test
+{
+public static void main(String[] a)
+{
+float r,l,b,h;
+Circle c = new Circle();
+Square s1 = new Square();
+Triangle t = new Triangle();
+Scanner s = new Scanner(System.in);
+System.out.println("Enter the radius of a Circle");
+r=s.nextFloat();
+System.out.println("Enter the length of a Square");
+l=s.nextFloat();
+System.out.println("Enter breadth and height of a 
+Triangle");
+b=s.nextFloat();
+h=s.nextFloat();
+System.out.println("Arear of Circle : "+c.Area(r));
+System.out.println("Area of Square : "+s1.Area(l));
+System.out.println("Area of Triangle : "+t.Area(b,h));
+}
+}
