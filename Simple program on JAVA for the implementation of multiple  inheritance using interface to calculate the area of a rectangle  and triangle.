@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+interface Rectangle
+{
+public void areaRect(int width,int height);
+}
+interface Triangle
+{
+public void areaTriangle(double b,double h);
+}
+class MulInher implements Rectangle,Triangle
+{
+public void areaRect(int width,int height)
+{
+int area = width*height;
+System.out.println("The area of Rectangle is"+area);
+}
+public void areaTriangle(double b,double h)
+{
+double area;
+area=0.5*(b*h);
+System.out.println("The area of Triangle is "+area);
+}
+}
+public class MulInherDemo
+{
+public static void main(String args[])throws 
+java.io.IOException
+{
+MulInher obj = new MulInher();
+BufferedReader br = new BufferedReader(new 
+InputStreamReader(System.in));
+int w,h;
+double b,h1;
+System.out.println("Enter the width and Height of the 
+Rectangle");
+w=Integer.parseInt(br.readLine());
+h=Integer.parseInt(br.readLine());
+obj.areaRect(w,h);
+System.out.println("\nEnter a base and height : ");
+b=Integer.parseInt(br.readLine());
+h1=Integer.parseInt(br.readLine());
+obj.areaTriangle(b,h1);
+}
+}
