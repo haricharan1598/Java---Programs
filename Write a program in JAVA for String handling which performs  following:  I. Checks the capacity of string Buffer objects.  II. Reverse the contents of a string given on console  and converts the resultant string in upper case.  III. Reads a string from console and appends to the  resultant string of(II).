@@ -1,0 +1,41 @@
+import java.io.*;
+class stringhandling
+{
+public static void main(String args[])throws 
+java.io.IOException
+{
+StringBuffer str = new StringBuffer("Java lab");
+BufferedReader br = new BufferedReader(new 
+InputStreamReader(System.in));
+int ch;
+System.out.println("Default String :"+str);
+while(true)
+{
+System.out.println("1.Capacity\n2.Reverse and converts 
+to upper case\n3.Append to resultant\n4.Exit");
+System.out.println("Enter your choice : ");
+ch=Integer.parseInt(br.readLine());
+switch(ch)
+{
+case 1: System.out.println("The capacity of the 
+string="+str.capacity());
+break;
+case 2: System.out.println("The reverse of the 
+string = "+str.reverse());
+String temp = new String(str);
+System.out.println("String in Upper Case 
+="+temp.toUpperCase());
+break;
+case 3: System.out.println("Enter the String to 
+conacte ");
+String str2 = br.readLine();
+System.out.println("String after 
+appened:"+str.append(str2));
+System.out.println("String="+str);
+break;
+case 4: return;
+default:return;
+}
+}
+}
+}
