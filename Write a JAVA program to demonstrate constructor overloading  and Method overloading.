@@ -1,0 +1,55 @@
+class Box
+{
+double width;
+double height;
+double depth;
+double vol;
+Box()
+{
+System.out.println("Initialized by umparameterized 
+constructor");
+width=height=depth=5;
+}
+Box(double w,double h,double d)
+{
+System.out.println("Intialized by parameterized 
+constructor");
+width=w;
+height=h;
+depth=d;
+}
+void volume()
+{
+vol=width*height*depth;
+}
+void display()
+{
+System.out.println("displayed using unparameterized 
+method");
+System.out.println("WIDTH="+width+":HEIGHT="+height+":DEPTH
+="+depth+":VOLUME+"+vol);
+}
+void display(double m)
+{
+System.out.println("Displayed using parameterized 
+method");
+System.out.println("WIDTH="+width+":HEIGHT="+height+":DEPTH
+="+depth+":VOLUME="+vol+":MASS="+m);
+}
+}
+class BoxDemo
+{
+public static void main(String args[])
+{
+System.out.println("BOX 1: ");
+Box b1=new Box();
+System.out.println("Box 2: ");
+Box b2=new Box(85.5,45.6,64.8);
+b1.volume();
+b2.volume();
+System.out.println("BOx1 : ");
+b1.display();
+System.out.println("Box 2 : ");
+b2.display(120.5);
+}
+}
