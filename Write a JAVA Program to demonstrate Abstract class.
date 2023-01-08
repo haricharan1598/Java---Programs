@@ -1,0 +1,51 @@
+abstract class Figuare{
+ double dim1;
+ double dim2;
+ Figuare(double x, double y)
+ {
+ dim1=x;
+ dim2=y;
+ }
+ abstract double area();
+}
+class Rectangle extends Figuare
+{
+ Rectangle( double x, double y)
+ {
+ super(x,y);
+ }
+ double area()
+ {
+ System.out.println(" Area of rectangle is:");
+ return dim1*dim2;
+ }
+}
+class Triangle extends Figuare
+{
+ Triangle(double x, double y)
+ {
+ super(x,y);
+ }
+ double area()
+ {
+ System.out.println("Area of Triangle is:");
+ return dim1*dim2/2;
+ 
+ }
+}
+public class Abstract {
+ 
+ public static void main(String[] args) {
+ Figuare figref;
+ Rectangle r=new Rectangle(9,5);
+ Triangle t=new Triangle(10,8);
+ figref=r;
+ System.out.println("Area of rectangle is:"+ 
+figref.area());
+ figref=t;
+ System.out.println("Area of triangle 
+is:"+figref.area());
+ 
+ }
+ 
+}
